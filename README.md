@@ -11,6 +11,7 @@ Originally inspired by a game I stumbled across on [gameee.vercel.app](https://g
 
 ### Key Features:
 - **Responsive Gameplay**: Works smoothly on desktop.
+- **Enhanced Background Design**: Edited background image to make trees appear larger.
 - **Pixel-Perfect Rendering**: Ensures crisp graphics on all devices.
 - **Centered Display and Screen Fit**: Optimized to fit any screen size without losing quality.
 - **Fullscreen Mode**: Easily toggle fullscreen mode for an immersive experience.
