@@ -1,6 +1,6 @@
-# Catch The Goblin Game
+# Catch The Goblin Game 🎮
 
-Originally inspired by a game I stumbled across on [gameee.vercel.app](https://gameee.vercel.app), this project enhances and completes the foundation left by the original. The goal was to improve functionality, add mobile support, and provide a more engaging gameplay experience.
+**Catch The Goblin** lets players capture elusive goblins within a retro-inspired arena. Originally inspired by a game I stumbled across on [gameee.vercel.app](https://gameee.vercel.app), this project enhances and completes the foundation left by the original. The goal was to center the game, make it fit the screen size, and ensure pixel-perfect rendering, providing a cleaner and more polished gameplay experience.
 
 [**Play Catch The Goblin on Vercel**](https://catch-the-goblin.vercel.app/)
 
@@ -10,7 +10,7 @@ Originally inspired by a game I stumbled across on [gameee.vercel.app](https://g
 ### Key Features:
 - **Responsive Gameplay**: Works smoothly on desktop; future mobile controls planned.
 - **Pixel-Perfect Rendering**: Ensures crisp graphics on all devices.
-- **Landscape Mode Lock on Mobile**: Optimized display for landscape view on mobile devices.
+- **Centered Display and Screen Fit**: Optimized to fit any screen size without losing quality.
 - **Smooth Animations and Controls**: Runs at 60fps with responsive keyboard controls.
 
 ### Future Improvements:
