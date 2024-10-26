@@ -1,5 +1,7 @@
 # Catch The Goblin Game
 
+<img src="media/catch-the-goblin.gif" width="420">
+
 Originally inspired by a game I stumbled across on [gameee.vercel.app](https://gameee.vercel.app), this project enhances and completes the foundation left by the original. The goal was to provide a cleaner and more polished gameplay experience.
 
 [**Play Catch The Goblin on Vercel**](https://catch-the-goblin.vercel.app/)
