@@ -5,6 +5,7 @@
     <title>JS Game | Catch The Goblin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <style>
+        /* Existing styles */
         html, body {
             height: 100%;
             margin: 0;
@@ -20,6 +21,7 @@
             width: 100%;
             height: 100%;
             background-color: black;
+            display: none; /* Hide the game container initially */
         }
 
         #game-canvas {
@@ -27,49 +29,64 @@
             margin: 0 auto;
             background-color: black;
             outline: none;
-            
+
             /* Pixel-perfect rendering */
-            image-rendering: pixelated; /* For modern browsers */
-            image-rendering: crisp-edges; /* For older browsers */
+            image-rendering: pixelated;
+            image-rendering: crisp-edges;
+        }
+
+        #loading-message {
+            color: white;
+            font-size: 24px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
     </style>
 </head>
 <body>
+
+    <!-- Loading Message -->
+    <div id="loading-message">Loading game...</div>
 
     <!-- Game Container -->
     <div id="game-container">
         <canvas id="game-canvas" tabindex="1"></canvas>
     </div>
 
-    <!-- Reference the game.js file in the js folder -->
-    <script src="js/game.js"></script>
-    
+    <!-- Set up the event listener before loading game.js -->
     <script>
-        // Prevent zoom with keyboard or mouse
-        document.addEventListener('keydown', function(event) {
-            if (event.ctrlKey && (event.key === '+' || event.key === '-' || event.key === '=' || event.key === '_')) {
-                event.preventDefault();
-            }
-        });
-        document.addEventListener('wheel', function(event) {
-            if (event.ctrlKey) {
-                event.preventDefault();
-            }
-        }, { passive: false });
+        // Debug log: Starting to load page
+        console.log("Page loading...");
 
-        // Automatically resize canvas to fit height and maintain 16:15 aspect ratio
-        window.onload = function() {
-            resizeCanvas();
-        }
+        // Set a timeout to handle cases where the gameLoaded event is not received
+        const loadingTimeout = setTimeout(() => {
+            document.getElementById('loading-message').textContent = "Failed to load game. Please try again.";
+            console.error("Game loading timeout: 'gameLoaded' event not received.");
+        }, 10000); // 10 seconds timeout
 
-        // Resize canvas to fit height and maintain 385:352 aspect ratio
+        // Automatically resize canvas to fit height or width and maintain aspect ratio
         function resizeCanvas() {
             const canvas = document.getElementById("game-canvas");
-            const aspectRatio = 385 / 352;
+            const aspectRatio = 385 / 352; // Your game's aspect ratio
 
-            const availableHeight = window.innerHeight;
-            const cssHeight = availableHeight;
-            const cssWidth = availableHeight * aspectRatio;
+            const windowWidth = window.innerWidth;
+            const windowHeight = window.innerHeight;
+
+            const isPortrait = windowHeight > windowWidth;
+
+            let cssWidth, cssHeight;
+
+            if (isPortrait) {
+                // Fit to width in portrait mode
+                cssWidth = windowWidth;
+                cssHeight = windowWidth / aspectRatio;
+            } else {
+                // Fit to height in landscape mode
+                cssHeight = windowHeight;
+                cssWidth = windowHeight * aspectRatio;
+            }
 
             // Apply calculated CSS width and height
             canvas.style.width = cssWidth + 'px';
@@ -80,19 +97,40 @@
             canvas.width = Math.round(cssWidth * devicePixelRatio);
             canvas.height = Math.round(cssHeight * devicePixelRatio);
 
-            // Center the canvas horizontally if there’s extra space
-            canvas.style.marginLeft = ((window.innerWidth - cssWidth) / 2) + 'px';
-            canvas.style.marginTop = 0;
+            // Center the canvas horizontally and vertically
+            canvas.style.marginLeft = ((windowWidth - cssWidth) / 2) + 'px';
+            canvas.style.marginTop = ((windowHeight - cssHeight) / 2) + 'px';
 
-            // Disable image smoothing after resizing
-            ctx.imageSmoothingEnabled = false;
-            ctx.webkitImageSmoothingEnabled = false;
-            ctx.mozImageSmoothingEnabled = false;
-            ctx.msImageSmoothingEnabled = false;
+            // No need to disable image smoothing here; it's handled in game.js
         }
 
-        // Resize canvas on window resize
-        window.addEventListener('resize', resizeCanvas);
+        // Listen for the gameLoaded event from game.js
+        document.addEventListener('gameLoaded', function() {
+            console.log("Received 'gameLoaded' event from game.js.");
+
+            // Clear the loading timeout
+            clearTimeout(loadingTimeout);
+
+            // Hide the loading message and show the game
+            document.getElementById('loading-message').style.display = 'none';
+            document.getElementById('game-container').style.display = 'block';
+
+            // Resize the canvas after showing it
+            resizeCanvas();
+
+            // Focus the canvas to capture keyboard events
+            document.getElementById('game-canvas').focus();
+        });
+
+        // Log when resizing due to window resize
+        window.addEventListener('resize', function() {
+            console.log("Window resized, adjusting canvas...");
+            resizeCanvas();
+        });
     </script>
+
+    <!-- Reference the game.js file in the js folder -->
+    <script src="js/game.js"></script>
+
 </body>
 </html>
