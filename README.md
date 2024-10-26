@@ -45,3 +45,20 @@ To run **Catch The Goblin** locally:
 4. **Enjoy the Game**:
    - To enter fullscreen mode, press **F11**.
    - Use keyboard controls to capture goblins and see how high of a score you can achieve!
+   
+### Run the Game as a Desktop Application
+
+**Catch The Goblin** is also available as a standalone `.exe` file, built with [Tauri](https://tauri.app), which provides a lightweight and fast native experience.
+
+1. **Download the `.exe`**:
+   - Visit the [Releases](https://github.com/Glooring/catch-the-goblin/releases) section of this repository.
+   - Download the latest `.zip` file containing the `catch-the-goblin.exe` file.
+
+2. **Extract and Run**:
+   - Extract the `.zip` file.
+   - Double-click `CatchTheGoblin.exe` to start the game.
+
+3. **Play Fullscreen**:
+   - For an immersive experience, enter fullscreen mode by pressing **F11**.
+
+The Tauri-built `.exe` offers a compact, standalone version of the game without needing a browser.
