@@ -51,7 +51,7 @@ To run **Catch The Goblin** locally:
 **Catch The Goblin** is also available as a standalone `.exe` file, built with [Tauri](https://tauri.app), which provides a lightweight and fast native experience.
 
 1. **Download the `.exe`**:
-   - Download the latest release from the [Releases](https://github.com/Glooring/catch-the-goblin/releases) page or directly using [this link](https://github.com/Glooring/catch-the-goblin/releases/download/v1.0.0/catch-the-goblin.zip)
+   - Download the latest release from the [Releases](https://github.com/Glooring/catch-the-goblin/releases) page or directly using [this link](https://github.com/Glooring/catch-the-goblin/releases/download/v1.0.0/catch-the-goblin.zip).
 
 2. **Extract and Run**:
    - Extract the `.zip` file.
