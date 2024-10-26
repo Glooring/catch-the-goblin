@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <title>JS Game | Catch The Goblin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            touch-action: none;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        #game-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+        }
+
+        #game-canvas {
+            display: block;
+            margin: 0 auto;
+            background-color: black;
+            outline: none;
+            
+            /* Pixel-perfect rendering */
+            image-rendering: pixelated; /* For modern browsers */
+            image-rendering: crisp-edges; /* For older browsers */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Game Container -->
+    <div id="game-container">
+        <canvas id="game-canvas" tabindex="1"></canvas>
+    </div>
+
+    <!-- Reference the game.js file in the js folder -->
+    <script src="js/game.js"></script>
+    
+    <script>
+        // Prevent zoom with keyboard or mouse
+        document.addEventListener('keydown', function(event) {
+            if (event.ctrlKey && (event.key === '+' || event.key === '-' || event.key === '=' || event.key === '_')) {
+                event.preventDefault();
+            }
+        });
+        document.addEventListener('wheel', function(event) {
+            if (event.ctrlKey) {
+                event.preventDefault();
+            }
+        }, { passive: false });
+
+        // Automatically resize canvas to fit height and maintain 16:15 aspect ratio
+        window.onload = function() {
+            resizeCanvas();
+        }
+
+        // Resize canvas to fit height and maintain 385:352 aspect ratio
+        function resizeCanvas() {
+            const canvas = document.getElementById("game-canvas");
+            const aspectRatio = 385 / 352;
+
+            const availableHeight = window.innerHeight;
+            const cssHeight = availableHeight;
+            const cssWidth = availableHeight * aspectRatio;
+
+            // Apply calculated CSS width and height
+            canvas.style.width = cssWidth + 'px';
+            canvas.style.height = cssHeight + 'px';
+
+            // Adjust canvas pixel dimensions for rendering, keeping aspect ratio
+            const devicePixelRatio = window.devicePixelRatio || 1;
+            canvas.width = Math.round(cssWidth * devicePixelRatio);
+            canvas.height = Math.round(cssHeight * devicePixelRatio);
+
+            // Center the canvas horizontally if there’s extra space
+            canvas.style.marginLeft = ((window.innerWidth - cssWidth) / 2) + 'px';
+            canvas.style.marginTop = 0;
+
+            // Disable image smoothing after resizing
+            ctx.imageSmoothingEnabled = false;
+            ctx.webkitImageSmoothingEnabled = false;
+            ctx.mozImageSmoothingEnabled = false;
+            ctx.msImageSmoothingEnabled = false;
+        }
+
+        // Resize canvas on window resize
+        window.addEventListener('resize', resizeCanvas);
+    </script>
+</body>
+</html>
