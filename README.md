@@ -21,3 +21,27 @@ Originally inspired by a game I stumbled across on [gameee.vercel.app](https://g
 
 ### Future Improvements:
 - **Touch Controls for Mobile**: Planned addition of touch buttons to enable mobile gameplay.
+
+## How to Use
+
+To run **Catch The Goblin** locally:
+
+1. **Clone the Repository**:
+   Open a terminal and run:
+   ```bash
+   git clone https://github.com/Glooring/catch-the-goblin.git
+   ```
+
+2. **Navigate to the Project Folder**:
+   ```bash
+   cd catch-the-goblin
+   ```
+
+3. **Open `index.html`**:
+   - Locate the `index.html` file inside the project folder.
+   - Open it directly in your browser by double-clicking the file or right-clicking and selecting "Open With" -> "Your Preferred Browser."
+   - You should now see the **Catch The Goblin** game load in your browser.
+
+4. **Enjoy the Game**:
+   - To enter fullscreen mode, press **F11**.
+   - Use keyboard controls to capture goblins and see how high of a score you can achieve!
