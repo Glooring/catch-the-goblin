@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	// Game objects with relative positions and sizes
 	var hero = {
-		baseSpeed: 270, // original movement speed in pixels per second
+		baseSpeed: 240, // original movement speed in pixels per second
 		widthPercent: 0.07, // width as a percentage of canvas width
 		heightPercent: 0.07, // height as a percentage of canvas height
 		xPercent: 0.5, // Horizontal position as percentage of canvas width
