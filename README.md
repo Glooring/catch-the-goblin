@@ -13,7 +13,7 @@ Originally inspired by a game I stumbled across on [gameee.vercel.app](https://g
 - **Centered Display and Screen Fit**: Optimized to fit any screen size without losing quality.
 - **Fullscreen Mode**: Easily toggle fullscreen mode for an immersive experience.
 - **Loading Screen**: Displays a loading screen while assets load for a smoother experience.
-- **Collision Walls Around Obstacles**: Hero and goblin are blocked by trees and other obstacles, adding strategic challenge.
+- **Collision Walls Around Obstacles**: Hero and goblin are blocked by trees.
 - **Smooth Animations and Controls**: Runs at 60fps with responsive keyboard controls.
 
 ### Future Improvements:
