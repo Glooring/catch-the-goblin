@@ -46,7 +46,7 @@ To run **Catch The Goblin** locally:
    - To enter fullscreen mode, press **F11**.
    - Use keyboard controls to capture goblins and see how high of a score you can achieve!
    
- ### Project Structure
+### Project Structure
 
 Here's an overview of the project structure:
 
