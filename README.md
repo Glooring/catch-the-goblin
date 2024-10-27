@@ -9,6 +9,27 @@ Originally inspired by a game I stumbled across on [gameee.vercel.app](https://g
 ## About the Game
 **Catch The Goblin** is a simple game that challenges players to capture goblins on-screen. As the game progresses, goblins appear at random locations, keeping players on their toes. The objective is straightforward but fun: **Catch as many goblins as you can!**
 
+### Project Structure
+
+Here's an overview of the project structure:
+
+```
+catch-the-goblin/
+│
+├── src/
+│   ├── index.html              # Main HTML file for the game
+│   ├── js/
+│   │   └── game.js             # Game logic in JavaScript
+│   └── images/                 # Folder for game images/assets
+├── src-tauri/
+│   ├── tauri.conf.json         # Tauri configuration file
+│   └── src/
+│       └── main.rs             # Rust main file for Tauri application setup
+├── media/ 						# Containing GIF for the README preview
+└── README.md                   # Project documentation
+ 
+```  
+
 ### Key Features:
 - **Responsive Gameplay**: Works smoothly on desktop.
 - **Enhanced Background Design**: Edited background image to make trees appear larger.
@@ -45,7 +66,7 @@ To run **Catch The Goblin** locally:
 4. **Enjoy the Game**:
    - To enter fullscreen mode, press **F11**.
    - Use keyboard controls to capture goblins and see how high of a score you can achieve!
-   
+ 
 ### Run the Game as a Desktop Application
 
 **Catch The Goblin** is also available as a standalone `.exe` file, built with [Tauri](https://tauri.app), which provides a lightweight and fast native experience.
@@ -62,25 +83,3 @@ The Tauri-built `.exe` offers a compact, standalone version of the game without 
 ### Full Tauri Setup Tutorial
 
 For a complete guide on setting up and building **Catch the Goblin** as a Tauri `.exe` application, see the [Catch the Goblin Tauri Tutorial](docs/tutorial.md).
-   
-   
-## Project Structure
-
-Here's an overview of the project structure:
-
-```
-catch-the-goblin/
-│
-├── src/
-│   ├── index.html              # Main HTML file for the game
-│   ├── js/
-│   │   └── game.js             # Game logic in JavaScript
-│   └── images/                 # Folder for game images/assets
-├── src-tauri/
-│   ├── tauri.conf.json         # Tauri configuration file
-│   └── src/
-│       └── main.rs             # Rust main file for Tauri application setup
-├── media/ 						# Containing GIF for the README preview
-└── README.md                   # Project documentation
- 
-```  
