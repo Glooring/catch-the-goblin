@@ -46,7 +46,25 @@ To run **Catch The Goblin** locally:
    - To enter fullscreen mode, press **F11**.
    - Use keyboard controls to capture goblins and see how high of a score you can achieve!
    
-### Project Structure
+### Run the Game as a Desktop Application
+
+**Catch The Goblin** is also available as a standalone `.exe` file, built with [Tauri](https://tauri.app), which provides a lightweight and fast native experience.
+
+1. **Download the `.exe`**:
+   - Download the latest release from the [Releases](https://github.com/Glooring/catch-the-goblin/releases) page or directly using [this link](https://github.com/Glooring/catch-the-goblin/releases/download/v1.0.0/catch-the-goblin.zip).
+
+2. **Extract and Run**:
+   - Extract the `.zip` file.
+   - Double-click `catch-the-goblin.exe` to start the game.
+
+The Tauri-built `.exe` offers a compact, standalone version of the game without needing a browser.  
+   
+### Full Tauri Setup Tutorial
+
+For a complete guide on setting up and building **Catch the Goblin** as a Tauri `.exe` application, see the [Catch the Goblin Tauri Tutorial](docs/tutorial.md).
+   
+   
+## Project Structure
 
 Here's an overview of the project structure:
 
@@ -66,21 +84,3 @@ catch-the-goblin/
 └── README.md                   # Project documentation
  
 ```  
-   
-### Run the Game as a Desktop Application
-
-**Catch The Goblin** is also available as a standalone `.exe` file, built with [Tauri](https://tauri.app), which provides a lightweight and fast native experience.
-
-1. **Download the `.exe`**:
-   - Download the latest release from the [Releases](https://github.com/Glooring/catch-the-goblin/releases) page or directly using [this link](https://github.com/Glooring/catch-the-goblin/releases/download/v1.0.0/catch-the-goblin.zip).
-
-2. **Extract and Run**:
-   - Extract the `.zip` file.
-   - Double-click `catch-the-goblin.exe` to start the game.
-
-The Tauri-built `.exe` offers a compact, standalone version of the game without needing a browser.
-
-
-### Full Tauri Setup Tutorial
-
-For a complete guide on setting up and building **Catch the Goblin** as a Tauri `.exe` application, see the [Catch the Goblin Tauri Tutorial](docs/tutorial.md).
