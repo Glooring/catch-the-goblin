@@ -66,52 +66,58 @@ This guide provides each step from installing prerequisites to building the `.ex
 
 - Open `src/index.html` and add JavaScript to enable fullscreen mode when `F11` is pressed:
   ```html
-  <script>
-      window.addEventListener('keydown', (event) => {
-          if (event.key === 'F11') {
-              event.preventDefault(); // Prevent default browser action
-              window.__TAURI__.event.emit("toggleFullscreen");
-          }
-      });
-  </script>
+	<script>
+		// Other initialization or game-related code can go here
+
+		// Enable fullscreen mode when F11 is pressed
+		window.addEventListener('keydown', (event) => {
+			if (event.key === 'F11') {
+				event.preventDefault(); // Prevent default browser action
+				window.__TAURI__.event.emit("toggleFullscreen");
+			}
+		});
+
+		// Additional JavaScript as needed for game setup
+	</script>
   ```
 
 #### 2. Edit `src-tauri/tauri.conf.json`
 
 - Configure the application and window settings:
   ```json
-  {
-    "$schema": "https://schema.tauri.app/config/2",
-    "productName": "catch-the-goblin",
-    "version": "0.1.0",
-    "identifier": "com.catch-the-goblin.app",
-    "build": {
-      "frontendDist": "../src"
-    },
-    "app": {
-      "windows": [
-        {
-          "label": "main",
-          "title": "Catch The Goblin",
-          "width": 800,
-          "height": 600,
-          "visible": true,
-          "fullscreen": false
-        }
-      ]
-    },
-    "bundle": {
-      "active": true,
-      "targets": "all",
-      "icon": [
-        "icons/32x32.png",
-        "icons/128x128.png",
-        "icons/128x128@2x.png",
-        "icons/icon.icns",
-        "icons/icon.ico"
-      ]
-    }
-  }
+	{
+	  "$schema": "https://schema.tauri.app/config/2",
+	  "productName": "catch-the-goblin",
+	  "version": "0.1.0",
+	  "identifier": "com.catch-the-goblin.app",
+	  "build": {
+		"frontendDist": "../src"
+	  },
+	  "app": {
+		"withGlobalTauri": true,
+		"windows": [
+		  {
+			"title": "catch-the-goblin",
+			"width": 800,
+			"height": 600
+		  }
+		],
+		"security": {
+		  "csp": null
+		}
+	  },
+	  "bundle": {
+		"active": true,
+		"targets": "all",
+		"icon": [
+		  "icons/32x32.png",
+		  "icons/128x128.png",
+		  "icons/128x128@2x.png",
+		  "icons/icon.icns",
+		  "icons/icon.ico"
+		]
+	  }
+	}
   ```
 
 #### 3. Update `src-tauri/src/main.rs`
