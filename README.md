@@ -27,7 +27,6 @@ catch-the-goblin/
 │       └── main.rs             # Rust main file for Tauri application setup
 ├── media/ 						# Containing GIF for the README preview
 └── README.md                   # Project documentation
- 
 ```  
 
 ### Key Features:
