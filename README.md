@@ -16,17 +16,13 @@ Here's an overview of the project structure:
 ```
 catch-the-goblin/
 │
-├── src/
-│   ├── index.html              # Main HTML file for the game
-│   ├── js/
-│   │   └── game.js             # Game logic in JavaScript
-│   └── images/                 # Folder for game images/assets
-├── src-tauri/
-│   ├── tauri.conf.json         # Tauri configuration file
-│   └── src/
-│       └── main.rs             # Rust main file for Tauri application setup
-├── media/ 						# Containing GIF for the README preview
-└── README.md                   # Project documentation
+├── docs/                   # Tutorial documentation for building with Tauri
+├── images/                 # Folder for game images/assets
+├── js/
+│   └── game.js             # Game logic in JavaScript
+├── media/ 				    # Containing GIF for the README preview
+├── README.md               # Project documentation
+└── index.html              # Main HTML file for the game
 ```  
 
 ### Key Features:
