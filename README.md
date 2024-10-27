@@ -20,7 +20,7 @@ catch-the-goblin/
 ├── images/                 # Folder for game images/assets
 ├── js/
 │   └── game.js             # Game logic in JavaScript
-├── media/ 				    # Containing GIF for the README preview
+├── media/                  # Containing GIF for the README preview
 ├── README.md               # Project documentation
 └── index.html              # Main HTML file for the game
 ```  
