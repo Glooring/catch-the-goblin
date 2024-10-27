@@ -46,6 +46,27 @@ To run **Catch The Goblin** locally:
    - To enter fullscreen mode, press **F11**.
    - Use keyboard controls to capture goblins and see how high of a score you can achieve!
    
+ ### Project Structure
+
+Here's an overview of the project structure:
+
+```
+catch-the-goblin/
+│
+├── src/
+│   ├── index.html              # Main HTML file for the game
+│   ├── js/
+│   │   └── game.js             # Game logic in JavaScript
+│   └── images/                 # Folder for game images/assets
+├── src-tauri/
+│   ├── tauri.conf.json         # Tauri configuration file
+│   └── src/
+│       └── main.rs             # Rust main file for Tauri application setup
+├── media/ 						# Containing GIF for the README preview
+└── README.md                   # Project documentation
+ 
+```  
+   
 ### Run the Game as a Desktop Application
 
 **Catch The Goblin** is also available as a standalone `.exe` file, built with [Tauri](https://tauri.app), which provides a lightweight and fast native experience.
@@ -58,6 +79,7 @@ To run **Catch The Goblin** locally:
    - Double-click `catch-the-goblin.exe` to start the game.
 
 The Tauri-built `.exe` offers a compact, standalone version of the game without needing a browser.
+
 
 ### Full Tauri Setup Tutorial
 
