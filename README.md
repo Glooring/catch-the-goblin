@@ -41,7 +41,7 @@ catch-the-goblin/
 
 ### Future Improvements:
 - **Touch Controls for Mobile**: Planned addition of touch buttons to enable mobile gameplay.
-
+---
 ## How to Use
 
 To run **Catch The Goblin** locally:
