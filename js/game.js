@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	// Game objects with relative positions and sizes
 	var hero = {
-		baseSpeed: 190, // original movement speed in pixels per second
+		baseSpeed: 95, // original movement speed in pixels per second
 		widthPercent: 0.07, // width as a percentage of canvas width
 		heightPercent: 0.07, // height as a percentage of canvas height
 		xPercent: 0.5, // Horizontal position as percentage of canvas width
@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	// Calculate hero's scaled speed based on canvas dimensions
 	function getScaledSpeed() {
-		const scale = canvas.height / 352; // Scale based on the canvas height for consistency
+		const scale = canvas.height / 176; // Scale based on the canvas height for consistency
 		return hero.baseSpeed * scale;
 	}
 
