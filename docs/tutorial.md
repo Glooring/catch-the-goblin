@@ -7,7 +7,7 @@ This guide provides each step from installing prerequisites to building the `.ex
 ### Step 1: Install Rust
 
 1. **Download Rust**:
-   - Go to the [official Rust website](https://www.rust-lang.org/) and follow the instructions to download and install Rust, which includes `cargo`, the Rust package manager.
+   - Go to the [official Rust website](https://www.rust-lang.org/tools/install/) and follow the instructions to download and install Rust, which includes `cargo`, the Rust package manager.
 
 2. **Verify the Installation**:
    - After installation, open a terminal or command prompt and run:
