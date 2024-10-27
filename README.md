@@ -74,6 +74,7 @@ To run **Catch The Goblin** locally:
    - Double-click `catch-the-goblin.exe` to start the game.
 
 The Tauri-built `.exe` offers a compact, standalone version of the game without needing a browser.  
+**Note:** Press **F11** to enter fullscreen mode, whether playing in the browser or using the `.exe` desktop application.
    
 ### Full Tauri Setup Tutorial
 
