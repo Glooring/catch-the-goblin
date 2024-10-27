@@ -30,7 +30,7 @@ catch-the-goblin/
 - **Enhanced Background Design**: Edited background image to make trees appear larger.
 - **Pixel-Perfect Rendering**: Ensures crisp graphics on all devices.
 - **Centered Display and Screen Fit**: Optimized to fit any screen size without losing quality.
-- **Fullscreen Mode**: Easily toggle fullscreen mode for an immersive experience.
+- **Fullscreen Mode**: Toggle fullscreen for immersive gameplay on both web and `.exe` versions.
 - **Loading Screen**: Displays a loading screen while assets load for a smoother experience.
 - **Collision Walls Around Obstacles**: Hero and goblin are blocked by trees.
 - **Smooth Animations and Controls**: Runs at 60fps with responsive keyboard controls.
@@ -74,8 +74,7 @@ To run **Catch The Goblin** locally:
    - Double-click `catch-the-goblin.exe` to start the game.
 
 The Tauri-built `.exe` offers a compact, standalone version of the game without needing a browser.  
-**Note:** Press **F11** to enter fullscreen mode, whether playing in the browser or using the `.exe` desktop application.
-   
+
 ### Full Tauri Setup Tutorial
 
 For a complete guide on setting up and building **Catch the Goblin** as a Tauri `.exe` application, see the [Catch the Goblin Tauri Tutorial](docs/tutorial.md).
